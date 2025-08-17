@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_responsive_ui/chat_detail_view.dart';
+import 'package:flutter_responsive_ui/chat_list_view.dart';
+import 'package:flutter_responsive_ui/home_page.dart';
 import 'package:flutter_responsive_ui/responsive_view.dart';
 
 void main() {
@@ -11,25 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ResponsiveView(
-        // 모바일에서는 가로 크기를 동적으로 늘릴 수가 없어서
-        // 웹에서 테스트
-        mobile: Container(
-          color: Colors.red,
-        ),
-        mobile480: Container(
-          color: Colors.orange,
-        ),
-        tablet600: Container(
-          color: Colors.yellow,
-        ),
-        tablet768: Container(
-          color: Colors.green,
-        ),
-        pc1024: Container(
-          color: Colors.blue,
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
